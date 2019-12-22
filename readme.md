@@ -1,13 +1,12 @@
 # You don't need loops in ES6
 
+## Quick Links
 
-**[Recursion](#recursion)**
+* Recursion [with higher-order functions](#higher-order-functions)
 
-*[With higher-order functions](#higher-order-functions)*
+  1. [Sum](#sum-1)
 
-1. [Sum](#sum-1)
-
-## Higher-order functions
+## Recursion with higher-order functions
 
 Recursion is too low-level. Not low-level in the sense of direct access to the machine but low-level in the sense of language design and abstraction. **Both loops and recursions do a poor job of signalling intent.** This is where **higher-order functions** come in. Map, filter, fold and friends package up common recursive patterns into library functions that are easier to use than direct recursion and signal intent.
 
