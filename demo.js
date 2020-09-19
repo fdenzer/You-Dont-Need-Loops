@@ -10,13 +10,19 @@ const para =
       ? acc
       : para(f, f(acc, first(xs), xs), rest(xs))
 
-const sum =
+const _sum =
   (accumulated, y, ys) => accumulated + y
 
-const multiply =
+const _multiply =
   (product, z, zs) => product * z
 
-console.log(para(sum, 0, [1, 2, 4, 8]))
-console.log(para(multiply, 1, [1, 2, 4, 8]))
+//console.log(para(sum, 0, [1, 2, 4, 8]))
+const sum = summands => para(_sum, 0, summands)
+console.log(sum([1, 2, 4, 8]))
+
+//console.log(para(multiply, 1, [1, 2, 4, 8]))
+const multiply = factors => para(_multiply, 1, factors)
+console.log(multiply([1, 2, 4, 8]))
+
 
 //export {sum, multiply}
